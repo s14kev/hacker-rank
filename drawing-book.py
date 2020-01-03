@@ -10,12 +10,13 @@ def pageCount(n, p):
     if numPages % 2 == 1:
         turnBack = (n - p) // 2
         answer.append(turnBack)
+
     elif n == p:
         turnBack = 0
         answer.append(turnBack)
 
     else:
-        turnBack = (n - p) // 2 + 1
+        turnBack = 1 + (n - p - 1) // 2
         answer.append(turnBack)
 
     return min(answer)
